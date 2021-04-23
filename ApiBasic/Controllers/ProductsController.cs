@@ -11,5 +11,6 @@ namespace ApiBasic.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+
     }
 }
