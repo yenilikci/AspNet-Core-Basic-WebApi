@@ -1,0 +1,21 @@
+﻿@model List<Product>
+@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
