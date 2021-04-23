@@ -26,6 +26,12 @@ namespace ApiBasic.Controllers
             return Ok(_context.Products.ToList());
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetProductById(int id)
+        {
+            return Ok(_context.Products.FirstOrDefault(I => I.Id == id));
+        }
+
         [HttpPut("{id}")]
         public IActionResult UpdateProduct(int id, Product product)
         {
