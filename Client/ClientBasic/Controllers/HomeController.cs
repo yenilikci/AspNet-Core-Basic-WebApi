@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ClientBasic.Controllers
@@ -22,5 +23,28 @@ namespace ClientBasic.Controllers
             }
             return View(products);
         }
+
+        public IActionResult Add()
+        {
+            return View(new Product());
+        }
+
+        [HttpPost]
+        public IActionResult Add(Product product)
+        {
+            HttpClient httpClient = new HttpClient();
+            StringContent content = new StringContent(JsonConvert.SerializeObject(product),Encoding.UTF8,"application/json");
+            var responseMessage = httpClient.PostAsync("https://localhost:44388/api/Products",content).Result;
+            if (responseMessage.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("","Ekleme İşlemi Başarısız");
+            return View();
+        
+        }
+
+
+
     }
 }
