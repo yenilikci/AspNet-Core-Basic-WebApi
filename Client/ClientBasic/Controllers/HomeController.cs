@@ -71,5 +71,12 @@ namespace ClientBasic.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Delete(int id)
+        {
+            HttpClient httpClient = new HttpClient();
+            var responseMessage = httpClient.DeleteAsync($"https://localhost:44388/api/Products/{id}").Result;
+            return RedirectToAction("Index");
+        }
+
     }
 }
