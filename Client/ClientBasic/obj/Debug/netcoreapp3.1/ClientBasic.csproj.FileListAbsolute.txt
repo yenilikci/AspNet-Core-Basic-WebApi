@@ -106,3 +106,4 @@ C:\Users\melih\source\repos\ClientBasic\ClientBasic\obj\Debug\netcoreapp3.1\Clie
 C:\Users\melih\source\repos\ClientBasic\ClientBasic\obj\Debug\netcoreapp3.1\ClientBasic.Views.pdb
 C:\Users\melih\source\repos\ClientBasic\ClientBasic\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\melih\source\repos\ClientBasic\ClientBasic\obj\Debug\netcoreapp3.1\Razor\Views\Home\Add.cshtml.g.cs
+C:\Users\melih\source\repos\ClientBasic\ClientBasic\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs

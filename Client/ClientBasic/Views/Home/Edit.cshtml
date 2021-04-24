@@ -1,4 +1,5 @@
 ﻿@model Product
+
 @{
     Layout = null;
 }
@@ -10,7 +11,8 @@
 </head>
 <body>
     <div class="container mt-2">
-        <form asp-action="Add" asp-controller="Home" method="post">
+        <form asp-action="Edit" asp-controller="Home" method="post">
+            <input type="hidden" asp-for="Id"/>
             <div class="form-group">
                 <label>Product Name</label>
                 <input type="text" asp-for="Name" class="form-control" />
